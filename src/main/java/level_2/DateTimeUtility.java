@@ -9,6 +9,8 @@ public class DateTimeUtility {
     private final static DateTimeFormatter FORMAT_DATE_STYLE_US = DateTimeFormatter.ofPattern("MM/dd/yyyy");
     private final static DateTimeFormatter FORMAT_FULL_WEEKDAY_DATE_STYLE = DateTimeFormatter.ofPattern("EEEE, dd MMMM yyyy");
 
+    public static final DateTimeFormatter FORMAT_DAY_MONTH_YEAR_HOUR_MINUTE = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm");
+
     public static void showCurrentTimes() {
         showCurrentLocalDate();
         showCurrentLocalTime();

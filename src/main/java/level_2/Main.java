@@ -4,6 +4,8 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 public class Main {
+    AppointmentManager appointmentManager = new AppointmentManager();
+
     void main() {
         DateTimeUtility.showCurrentTimes();
 
@@ -17,5 +19,7 @@ public class Main {
 
         DateTimeUtility.isDatePreviousToToday(LocalDate.now().minusDays(2));
         DateTimeUtility.isDatePreviousToToday(LocalDate.now().plusDays(2));
+
+        appointmentManager.showAppointmentsOrdered();
     }
 }
