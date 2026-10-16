@@ -12,5 +12,7 @@ public class Main {
 
         DateTimeUtility.showDiffBetweenDatesTime(LocalDateTime.now(), LocalDateTime.now().minusDays(12));
         DateTimeUtility.showDiffBetweenDatesTime(LocalDateTime.now(), LocalDateTime.now().plusMonths(3));
+
+        DateTimeUtility.showInVariousFormats(LocalDateTime.now());
     }
 }

@@ -1,8 +1,13 @@
 package level_2;
 
 import java.time.*;
+import java.time.format.DateTimeFormatter;
 
 public class DateTimeUtility {
+    private final static DateTimeFormatter FORMAT_DATE_STYLE_ISO = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+    private final static DateTimeFormatter FORMAT_DATE_TIME_STYLE_ISO = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss");
+    private final static DateTimeFormatter FORMAT_DATE_STYLE_US = DateTimeFormatter.ofPattern("MM/dd/yyyy");
+    private final static DateTimeFormatter FORMAT_FULL_WEEKDAY_DATE_STYLE = DateTimeFormatter.ofPattern("EEEE, dd MMMM yyyy");
 
     public static void showCurrentTimes() {
         showCurrentLocalDate();
@@ -18,6 +23,16 @@ public class DateTimeUtility {
     public static void showDiffBetweenDatesTime(LocalDateTime startDateTime, LocalDateTime endDateTime) {
         Duration duration = Duration.between(startDateTime, endDateTime);
         System.out.println("Difference between " + startDateTime + " and " + endDateTime + " in " + duration.toDays() + "days (Duration conversion)");
+    }
+
+    public static void showInVariousFormats(LocalDateTime localDateTime){
+        System.out.println("LocalDateTime: " + localDateTime);
+        System.out.println("In Various formats:");
+        System.out.println("-----------------");
+        System.out.println("In date style ISO: " + localDateTime.format(FORMAT_DATE_STYLE_ISO));
+        System.out.println("In date style US: " + localDateTime.format(FORMAT_DATE_STYLE_US));
+        System.out.println("In date time style ISO: " + localDateTime.format(FORMAT_DATE_TIME_STYLE_ISO));
+        System.out.println("In date fullweek style " + localDateTime.format(FORMAT_FULL_WEEKDAY_DATE_STYLE));
     }
 
     private static void showCurrentLocalDate() {
