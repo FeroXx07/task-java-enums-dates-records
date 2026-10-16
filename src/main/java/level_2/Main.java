@@ -14,5 +14,8 @@ public class Main {
         DateTimeUtility.showDiffBetweenDatesTime(LocalDateTime.now(), LocalDateTime.now().plusMonths(3));
 
         DateTimeUtility.showInVariousFormats(LocalDateTime.now());
+
+        DateTimeUtility.isDatePreviousToToday(LocalDate.now().minusDays(2));
+        DateTimeUtility.isDatePreviousToToday(LocalDate.now().plusDays(2));
     }
 }

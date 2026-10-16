@@ -25,7 +25,7 @@ public class DateTimeUtility {
         System.out.println("Difference between " + startDateTime + " and " + endDateTime + " in " + duration.toDays() + "days (Duration conversion)");
     }
 
-    public static void showInVariousFormats(LocalDateTime localDateTime){
+    public static void showInVariousFormats(LocalDateTime localDateTime) {
         System.out.println("LocalDateTime: " + localDateTime);
         System.out.println("In Various formats:");
         System.out.println("-----------------");
@@ -35,17 +35,25 @@ public class DateTimeUtility {
         System.out.println("In date fullweek style " + localDateTime.format(FORMAT_FULL_WEEKDAY_DATE_STYLE));
     }
 
+    public static void isDatePreviousToToday(LocalDate localDate) {
+        if (localDate.isBefore(LocalDate.now())) {
+            System.out.println("Date " + localDate + " is previous to today " + LocalDate.now());
+        } else {
+            System.out.println("Date " + localDate + " is today or in the future " + LocalDate.now());
+        }
+    }
+
     private static void showCurrentLocalDate() {
         LocalDate localDate = LocalDate.now();
         System.out.println("Current local date: " + localDate);
     }
 
-    private static void showCurrentLocalTime(){
+    private static void showCurrentLocalTime() {
         LocalTime localTime = LocalTime.now();
         System.out.println("Current local time: " + localTime);
     }
 
-    private static void showCurrentLocalDateTime(){
+    private static void showCurrentLocalDateTime() {
         LocalDateTime localDateTime = LocalDateTime.now();
         System.out.println("Current local date time: " + localDateTime);
     }
