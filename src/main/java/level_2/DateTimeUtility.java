@@ -1,8 +1,6 @@
 package level_2;
 
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.LocalTime;
+import java.time.*;
 
 public class DateTimeUtility {
 
@@ -10,6 +8,16 @@ public class DateTimeUtility {
         showCurrentLocalDate();
         showCurrentLocalTime();
         showCurrentLocalDateTime();
+    }
+
+    public static void showDiffBetweenDates(LocalDate startDate, LocalDate endDate) {
+        Period period = Period.between(startDate, endDate);
+        System.out.println("Difference between " + startDate + " and " + endDate + " in " + period + " (Period format)");
+    }
+
+    public static void showDiffBetweenDatesTime(LocalDateTime startDateTime, LocalDateTime endDateTime) {
+        Duration duration = Duration.between(startDateTime, endDateTime);
+        System.out.println("Difference between " + startDateTime + " and " + endDateTime + " in " + duration.toDays() + "days (Duration conversion)");
     }
 
     private static void showCurrentLocalDate() {
