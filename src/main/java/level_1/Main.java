@@ -4,13 +4,13 @@ public class Main {
 
     TaskManager taskManager = new TaskManager();
     void main() {
-        DayUtility.processDay(Day.WEDNESDAY);
-        DayUtility.processDay(Day.SATURDAY);
+        DayUtility.isDayWeekend(Day.WEDNESDAY);
+        DayUtility.isDayWeekend(Day.SATURDAY);
 
         taskManager.doAllTasksByPriority();
 
         Day parsedDay = DayUtility.parseStringToEnum("MONDAY");
-        DayUtility.processDay(parsedDay);
+        DayUtility.isDayWeekend(parsedDay);
 
         DayUtility.parseStringToEnum("DOOMSDAY");
     }
