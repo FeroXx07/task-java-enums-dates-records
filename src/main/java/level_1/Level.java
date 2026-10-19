@@ -11,10 +11,6 @@ public enum Level {
         this.color = color;
     }
 
-    public String getColor() {
-        return color;
-    }
-
     public void sysOutPrintLn(String message) {
         System.out.println(this.color + message +
                 ConsoleColors.RESET);    }
