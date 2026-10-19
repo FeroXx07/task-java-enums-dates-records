@@ -20,6 +20,6 @@ public class Main {
         DateTimeUtility.isDatePreviousToToday(LocalDate.now().minusDays(2));
         DateTimeUtility.isDatePreviousToToday(LocalDate.now().plusDays(2));
 
-        appointmentManager.showAppointmentsOrdered();
+        appointmentManager.showFormattedData();
     }
 }
